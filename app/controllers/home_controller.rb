@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
     before_action :authenticate_user!
 
-    def index; end
+    def index
+        @groups = current_user.groups
+    end
 end

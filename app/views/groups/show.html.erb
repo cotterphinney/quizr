@@ -1,0 +1,9 @@
+<h1><%= @group.name %></h1>
+
+<%= link_to "Add card", new_group_card_path(@group) %>
+
+<% @group.cards.each do |card| %>
+    <p>
+        <%= card.term %>: <%= card.definition %>
+    </p>
+<% end %>

@@ -1,3 +1,11 @@
-hey
+<h1>Quizr</h1>
+
+<% @groups.each do |group| %>
+    <p>
+        <%= link_to "#{group.name}", group %>
+    </p>
+<% end %>
+
 <br>
+<%= link_to "new study set", new_group_path %>
 <%= link_to "log out", destroy_user_session_path, method: :delete %>
